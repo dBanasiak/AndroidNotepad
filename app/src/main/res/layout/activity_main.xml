@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello!"
+            android:textAlignment="center"
+            android:textSize="32dp"
+            android:fontFamily="monospace"/>
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="LogIn"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:textSize="24dp"
+            android:layout_marginTop="20dp"
+            />
+        <Button
+            android:id="@+id/setpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:text="Set password"
+            android:textAllCaps="true"
+            android:padding="10dp"
+            android:textSize="24dp"
+
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+    <include
+        android:id="@+id/setpassword_layout"
+        android:visibility="gone"
+        layout="@layout/set_password"
+        />
+    <include
+        android:id="@+id/login_layout"
+        android:visibility="gone"
+        layout="@layout/user_login"/>
+    <include
+        android:id="@+id/notepad_layout"
+        android:visibility="gone"
+        layout="@layout/notepad"/>
+</RelativeLayout>
